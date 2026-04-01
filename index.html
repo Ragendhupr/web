@@ -12,6 +12,7 @@
     <div class="Logo">
         <h1>StyleHaven</h1>
     </div>
+    <div class="menu_items" id="menu">
     <ul>
         <li><a href="">HOME</a></li>
         <li><a href="">ABOUT</a></li>
@@ -20,7 +21,8 @@
         <li><a href="">GALLERY</a></li>
         <li><a href="">CONTACT</a></li>
     </ul>
-    <button class="nav_icon">☰</button>
+    </div>
+    <button class="nav_icon" id="menubtn">☰</button>
 </nav>
 <section class="hero">
 <img src="https://wallpapers.com/images/hd/fashion-store-with-industrial-aesthetic-41qyopx1bf2s0xix.jpg" alt="store">
@@ -166,6 +168,21 @@
 <div class="footer_bottom">
     <p>© 2026 StyleHaven. All rights reserved.</p>
   </div>
+      <script>
+var menu = document.getElementById("menu");
+var menubtn = document.getElementById("menubtn");
+
+menubtn.onclick = function(){
+
+    if(menu.style.display === "block"){
+        menu.style.display = "none";
+    }
+    else{
+        menu.style.display = "block";
+    }
+
+}
+</script>
 
 </body>
 </html>
