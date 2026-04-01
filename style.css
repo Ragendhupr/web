@@ -7,24 +7,37 @@ body{
 }
 .nav_items{
     display: flex;
+    position: relative;
     justify-content: space-between;
     align-items: center;
     background-color: rgb(158, 107, 107);
     padding: 15px;
 }
-.nav_items ul{
+.menu_items{
     display: none;
-    gap: 25px;
+    position: absolute;
+    top: 100%;
+    z-index: 1000;
+    width: 100%;
+    left: 0;
+    background-color: rgb(158, 107, 107);
 }
-.nav_items ul li{
+.menu_items ul{
+     display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
+    padding:15px 0;
+}
+.menu_items ul li{
     list-style-type:none;
 }
-.nav_items ul li a{
+.menu_items ul li a{
     text-decoration: none;
     font-size: 12px;
     color: white;
 }
-.nav_items ul li a:hover{
+.menu_items ul li a:hover{
     color: rgb(211, 180, 180);
     text-decoration: underline;
 }
@@ -288,16 +301,31 @@ color: rgb(63, 3, 36);
 }
 
 
-@media  (min-width:600px){
+@media (min-width:600px){
+
 .nav_items{
     display: flex;
+    align-items: center;
 }
-.nav_items ul{
+
+.menu_items {
+    display: block;
+    width: auto;
+    position: static;
+}
+.menu_items ul{
     display: flex;
+    flex-direction: row;
+    gap: 25px;
 }
+.menu_items ul li{
+    padding: 0;
+}
+
 .nav_icon{
     display: none;
 }
+
 .hero{
     height: 490px;
 }
@@ -318,8 +346,15 @@ color: rgb(63, 3, 36);
  width: 200px;
  height: 200px;
 }
+.card_servicecard{
+    width: 130px;
+    padding: 15px;
+    text-align: center;
+}
+
 .card_servicecard img{
-    padding-left: 30px;
+    width: 60px;
+    height: 50px;
 }
 .gallery_container{
     display: grid;
@@ -337,7 +372,11 @@ color: rgb(63, 3, 36);
 }
 .footer{
     display: flex;
-    justify-content: center;
-    gap: 60px;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.footer_container{
+    max-width: 300px;
 }
 }
