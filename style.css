@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     font-family: 'Times New Roman', Times, serif;
@@ -341,13 +342,14 @@ color: rgb(63, 3, 36);
 }
 .feature_container{
     justify-content: center;
+    gap: 15px;
+    text-align: center;
 }
 .card_feature img{
  width: 200px;
  height: 200px;
 }
 .card_servicecard{
-    width: 130px;
     padding: 15px;
     text-align: center;
 }
